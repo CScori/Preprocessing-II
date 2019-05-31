@@ -2,8 +2,24 @@
   .welcome {
     margin-bottom: 20px;
     border-bottom: dashed 1px grey;
+    
+    @media (max-width: 500px) {
+      .layout(space-around, center);
+      flex-direction: column;
+    }
+   
     img {
         margin-bottom: 20px;
+
+        @media (max-width: 500px) {
+          width: 90%;
+          
+        }
+
+    }
+    p {
+      color: black;
+      // need to add media for placement
     }
 }
 }
