@@ -1,7 +1,7 @@
 .head {
   .welcome {
     margin-bottom: 20px;
-    border-bottom: dashed 1px grey;
+    border-bottom: 2px dashed @navigation-border;
     
     @media (max-width: 500px) {
       .layout(space-around, center);
@@ -17,10 +17,6 @@
         }
 
     }
-    p {
-      color: black;
-      // need to add media for placement
-    }
 }
 }
 .home {
@@ -31,16 +27,26 @@
     flex-wrap: wrap;
     justify-content: space-between;
 
-   
+    @media (max-width: 500px) {
+      flex-direction: column;
+    }
     
     .text-content {
       width: 48%;
       padding-right: 1%;
+
+      @media (max-width: 500px) {
+        width: 90%;
+      }
     }
 
     .img-content {
       width: 48%;
       padding-left: 1%;
+
+      @media (max-width: 500px) {
+        width: 90%;
+      }
 
       img {
         border-radius: 10px;
@@ -52,14 +58,26 @@
     padding-bottom: 30px;
     border-bottom: 2px dashed @navigation-border;
 
+    @media (max-width: 500px) {
+      display: flex;
+      flex-direction: column-reverse;
+    }
     .text-content {
       padding-left: 1%;
       padding-right: 0;
+
+      @media (max-width: 500px) {
+        width: 90%;
+      }
     }
 
     .img-content {
       padding-right: 1%;
       padding-left: 0;
+
+      @media (max-width: 500px) {
+        width: 90%;
+      }
     }
   }
 
@@ -78,13 +96,23 @@
     display: flex;
     justify-content: space-between;
 
+    @media (max-width: 500px) {
+      flex-direction: column;
+    }    
     .destination {
       width: 30%;
       margin-bottom: 30px;
-
+      
+      @media (max-width: 500px) {
+        width: 90%;
+      }   
       .btn {
         .button() ;
-        .layout(center, center)
+        .layout(center, center);
+
+        @media (max-width: 500px) {
+         width: 90%;
+        }  
       }
     }
   }
