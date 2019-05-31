@@ -3,9 +3,21 @@
   .layout(space-between, center);
   padding: 30px 0;
   border-bottom: dashed 1px grey;
+
+	@media (max-width: 500px) {
+    flex-direction: column;
+    padding: 0;
+  }
 .nav {
     .layout(space-around, center);
     width: 45%;
+
+    @media (max-width: 500px) {
+      .layout(space-around, center);
+      width: 90%;
+      padding-top: 10px;
+      padding-bottom: 5px;
+    }
     a {
         font-size: 1.7rem;
         text-decoration: none;
